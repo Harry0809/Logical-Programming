@@ -3,23 +3,14 @@ package com.logical.programming;
 
 public class LogicalProgramming {
 
-	public static void main(String args[]) {
-		int i, m = 0, flag = 0;
-		int n = 3;
-		m = n / 2;
-		if (n == 0 || n == 1) {
-			System.out.println(n + " is not prime number");
-		} else {
-			for (i = 2; i <= m; i++) {
-				if (n % i == 0) {
-					System.out.println(n + " is not prime number");
-					flag = 1;
-					break;
-				}
-			}
-			if (flag == 0) {
-				System.out.println(n + " is prime number");
-			}
+	public static void main(String[] args) {
+		int number = 3735536, reverse = 0;
+
+		while (number != 0) {
+			int remainder = number % 10;
+			reverse = reverse * 10 + remainder;
+			number = number / 10;
 		}
+		System.out.println("The reverse of the given number is: " + reverse);
 	}
 }
